@@ -75,8 +75,6 @@
 			}
 		}
     }
-	
-    NSLog(@"Initialized object %@", self);
     
     return self;
 }
