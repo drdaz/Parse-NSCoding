@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 UpdateZen. All rights reserved.
 //
 
-#import "PFFile+NSCoding.h"
+#import "PFFileObject+NSCoding.h"
 #import <objc/runtime.h>
 
 #define kPFFileName @"_name"
 #define kPFFileURL @"_url"
 #define kPFFileData @"data"
 
-@implementation PFFile (NSCoding)
+@implementation PFFileObject (NSCoding)
 
 - (void)encodeWithCoder:(NSCoder*)encoder
 {
@@ -31,7 +31,7 @@
     NSData* data = [aDecoder decodeObjectForKey:kPFFileData];
     
     if (data) {
-        self = [PFFile fileWithName:name data:data];
+        self = [PFFileObject fileObjectWithName:name data:data];
         if (self) {
             [self setValue:url forKey:@"_url"];
         }

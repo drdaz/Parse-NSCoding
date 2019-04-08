@@ -8,7 +8,7 @@
 
 #import <Parse/Parse.h>
 
-@interface PFFile (NSCoding)
+@interface PFFileObject (NSCoding)
 
 - (void)encodeWithCoder:(NSCoder*)encoder;
 - (id)initWithCoder:(NSCoder*)aDecoder;
